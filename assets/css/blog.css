@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,800;1,100;1,300;1,400;1,800&display=swap");
 
-/* 英語の設定 */
-
-
 /* 日本語の設定 */
 .ja {
   font-family: YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
@@ -10,8 +7,12 @@
   line-height: 1.24;
 }
 
-
+/* 英語の設定 */
 :not(.ja) {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+}
 
 
 * {
@@ -227,5 +228,4 @@ main {
   .articles .article .article-title a {
     font-size: 1rem;
   }
-}
 }
