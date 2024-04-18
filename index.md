@@ -1,4 +1,4 @@
 ---
-title: Blog
+title: Juri YONE
 layout: blog
 ---
