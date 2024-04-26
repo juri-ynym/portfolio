@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Portfolio
+title: 本ページでのポートフォリオについて
 date: 2024-04-26
-categories: ["jekyll", "Test Post", "first post"]
+categories: ["misc"]
 ---
 
-hello
+本ページでのポートフォリオは準備中です。
+職務経歴書、ポートフォリオはメールにてお問い合わせください。
