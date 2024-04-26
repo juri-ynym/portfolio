@@ -1,9 +1,8 @@
 ---
 layout: post
-title: ポートフォリオについて
+title: Portfolio
 date: 2024-04-26 10:18:00
-categories: [Misc]
+categories: []
 ---
 
-本ページでのポートフォリオは現在準備中です。
-職務経歴書やポートフォリオをご希望の方は、メールにてお問い合わせください。
+hello
