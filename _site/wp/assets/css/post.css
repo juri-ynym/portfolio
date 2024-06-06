@@ -1,0 +1,331 @@
+header{
+  padding:2rem 0 0.2rem 0;
+}
+
+.site-title.article-page {
+  font-size: 3rem;
+}
+
+#article .article-thumbnail {
+  margin: 1.2em 0;
+  width: inherit;
+  position: relative;
+  padding: 0rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#article .article-thumbnail .article-title {
+  font-size: 1.2rem !important;
+  color: var(--dm-contrast);
+  text-shadow: 0px 0px 3px var(--bg-dm-primary);
+  line-height: 120%;
+}
+
+
+
+/* #article .article-date {
+  padding: 4px 15px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--dm-contrast);
+  border-radius: var(--border-radius);
+} */
+
+#article .article-content {
+  margin-top: 3rem;
+}
+
+#article .article-content * {
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+/* markdown content */
+
+.article-content * {
+  line-height: 180%;
+}
+.article-content p {
+  margin: 0 0 1.75rem 0;
+  padding: 0;
+
+}
+.article-content a {
+  color: var(--dm-contrast);
+  border-bottom: 1px solid var(--dm-contrast);
+}
+.article-content h1 {
+  font-size: 1.6rem;
+}
+.article-content h2 {
+  font-size: 1.4rem;
+}
+.article-content h3 {
+  font-size: 1.2rem;
+}
+.article-content h4 {
+  font-size: 1.0rem;
+}
+.article-content h5 {
+  font-size: 1.0rem;
+}
+.article-content h6 {
+  font-size: 1rem;
+}
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  margin: 1.75rem 0;
+  font-weight: bolder !important;
+}
+.article-content blockquote {
+  padding-left: 0.4em;
+  margin-bottom: 1.75rem;
+  border-left: 0.3rem solid var(--dm-contrast);
+  font-size: 0.8rem;
+  color:var(--dm-contrast);
+}
+.article-content strong {
+  font-weight: 600 !important;
+}
+.article-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 0.0rem;
+}
+.article-content ol {
+  margin-left: 1.75rem;
+  margin-bottom: 0.0rem;
+}
+.article-content ol * ol,
+.article-content ul * ul {
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+.article-content table {
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+.article-content table th {
+  background-color: var(--text-dm-primary);
+  color: var(--bg-dm-primary);
+  border: 1px solid var(--bg-dm-primary);
+}
+.article-content table * {
+  border: 1px solid var(--text-dm-primary);
+  padding: 0.2rem;
+}
+.article-content img {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+/* pre , code */
+.article-content,
+.article-content div,
+.article-content div pre,
+.article-content div pre code {
+  overflow-x: auto !important;
+}
+
+.article-content pre {
+  background: var(--bg-dm-secondary) !important;
+  padding: 1rem 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.article-content code {
+  padding: 3px 5px;
+  color: var(--text-dm-secondary);
+  white-space: pre;
+  background: var(--bg-dm-secondary) !important;
+}
+
+/* lbox */
+
+#article .article-content img {
+  cursor: zoom-in;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-dm-primary);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  background-color: black;
+  border: 2px dashed var(--dm-contrast);
+}
+
+.keiko_yellow{
+  background: linear-gradient(transparent 50%,rgba(255, 252, 107, 0.69) 50%);
+}
+
+.easyLink-box{
+  margin-bottom: 1.2em !important;
+  border:0px solid var(--bg-dm-primary) !important;
+  border-radius:40px !important;
+
+}
+
+.price {
+  background:#32405E; /*背景色の指定*/
+  color:var(--bg-dm-primary); /*テキストの色の指定*/
+  padding:4px;
+  display: inline-block;
+  }
+.price p {
+  margin:0;
+  padding:0;
+  }
+
+/* iHerb */
+.item-details{
+	display:flex;
+  border-radius:40px;
+	padding:1.2em 1.2em;
+  background-color: #fcfcfc;
+  margin: 1.2em 0;
+}
+
+.item-buy{
+	font-size:12px;
+  margin-bottom:24px;
+}
+
+.img-item{
+	width:160px;
+	height:160px;
+  margin-left:0.4em;
+}
+
+.img-desc{
+	padding:16px 24px;
+}
+
+.item-brand{
+	font-size:12px;
+	letter-spacing:2px;
+}
+
+.item-name{
+	font-weight:600;
+	letter-spacing:2px;
+}
+
+.header-info{
+	font-size:14px;
+	letter-spacing:3px;
+}
+
+.breadcrumb{
+	font-size:14px;
+	letter-spacing:2px;
+}
+
+.post-tab{
+	font-size:14px;
+	letter-spacing:2px;
+
+}
+
+.img-quote{
+	font-size:10px;
+	letter-spacing:2px;
+	line-height:8px;
+	
+}
+
+.btn_iherb{
+  background-color: var( --text-dm-primary);
+  border-radius: 100vh;
+  display: inline-block;
+  margin-top:4px;
+  padding:0.4em 1.0em;
+
+}
+
+.btn_iherb a{
+  color: var(--bg-dm-primary);
+  background-color: var( --text-dm-primary);
+}
+
+.btn_iherb:hover {
+  color: var(--bg-dm-primary);
+  background: var( --text-dm-primary);
+  opacity: 80%;
+}
+
+.box_cus{
+
+
+  border-top: 1px solid var(--text-dm-secondary);
+  border-bottom: 1px solid var(--text-dm-secondary);
+  position: relative;
+  margin: 0.8em 0;
+}
+.cus_title{
+  position: absolute;
+  right: 0;
+  left: 0.6em;
+  top: 0.6em;
+  margin-left: 0.6em;
+  font-size: 1.0rem;
+  
+}
+.box_cus span{
+  padding: 0 .5em;
+  background: none;
+  color: var(--text-dm-secondary);
+  font-weight: bold !important;
+}
+.box_cus .cus_inner{
+  padding: 2.8em 2em 1.6em;
+  font-size: 0.9rem;
+  line-height:1.2em;
+}
+
+.box_coupon{
+  border-radius:40px;
+	padding:1.2em 1.2em;
+  background-color: #fcfcfc;
+  margin: 1.2em 0;
+  text-align:center;
+}
+
+.title_coupon{
+  font-size:0.8em;
+  margin:0.4em;
+}
+
+.copy button{
+  background-color: var( --text-dm-primary);
+  color:#fcfcfc;
+  border:none;
+  padding:0.4em 0.8em;
+  border-radius:40px;
+  margin:0.4em;
+}
+
