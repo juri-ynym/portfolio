@@ -1,4 +1,4 @@
 ---
-title: ぴぴぴぴ　ぶろぐ
+title: Juri Yone
 layout: blog
 ---
