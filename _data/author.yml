@@ -1,16 +1,19 @@
-name: Juri YONEYAMA
-dp: https://avatars2.githubusercontent.com/u/36638057?s=460&u=0cbe4fd6b5a3655d91b3eb86db834d0829a0c086&v=4
+name: Juri
+dp: ../../assets/images/favicon.png
 description: "
-  <p>
-    ユーザーの観察・分析、仮説検証が得意なUXリサーチャーです。WebサイトディレクションやUIデザインなども幅広く対応可能です。IT業界で4年間勤務した後、2022年に大学院に入学。人とコンピュータの関わりを研究するHuman-Computer Interaction分野においてAR（拡張現実）の研究を行い、工学修士を取得。修士では、ARアバタを用いた対面会話時の社交不安軽減手法を研究。2024年よりARのUXを研究すべく、フランスで博士課程に進学予定。
-  </p>
-  
+研究と野鳥について書くよ 
 "
-email: julie.ynym@gmail.com
+
+
+email: dev_sharad@outlook.com
 contact:
   - title: linkedin
-    url: https://www.linkedin.com/in/juriyamamoto/
+    url: https://www.linkedin.com/in/srsmaurya
+  - title: github
+    url: https://github.com/sharadcodes
+  - title: twitter
+    url: https://twitter.com/iamsharadraj
   - title: dev
-    url: https://juri-ynym.github.io
+    url: https://dev.to/sharadcodes
   - title: email
-    url: mailto:julie.ynym@gmail.com
+    url: mailto:dev_sharad@outlook.com

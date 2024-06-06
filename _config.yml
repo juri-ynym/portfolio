@@ -1,16 +1,21 @@
-title: Juri Yoneyama
+title: Juri Yone
+description: ポートフォリオ
+
 markdown: kramdown
+url: "https://juri-ynym.github.io"
+baseurl: "/portfolio"
 
 # for atom feed
 author:
-  name: Juri Yoneyama （米山樹里）
-  email: julie.ynym@gmail.com
+  name: Juri Yoneyama
+  email: 
 
 plugins:
   - jemoji
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate-v2
 
 collections_dir: all_collections
 collections:
@@ -23,4 +28,42 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
-exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
+exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md","/templates"]
+
+permalink: /:category/:title/
+
+# Pagination settings
+pagination:
+  enabled: true
+  per_page: 5
+  title: ":title - page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+  categories:
+    enabled: true
+    title: "Category: :title"
+    layout: "autopage_category"
+    permalink: "/category/:title/"
+  tags:
+    enabled: false
+    title: "Tag: :title"
+    layout: "autopage_tag"
+    permalink: "/tags/:title/"
+  collections:
+    enabled: false
+    title: "Collection: :title"
+    layout: "autopage_collection"
+    permalink: "/collections/:title/"
+
+autopages:
+  enabled: false
+  collections:
+    enabled: false
+  categories:
+    enabled: false
+  tags:
+    enabled: false

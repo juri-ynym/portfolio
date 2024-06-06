@@ -1,23 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
   {% include head.html %}
   <body>
-    <main>
+    <main class="blogfeed">
+      
       {% include header.html %}
-      <section class="article">
-        <div class="article-header">
-          <h2 class="article-title">{{page.title}}</h2>
-          <small class="date">{{page.date | date_to_string}}</small>
-          <div class="categories">
-            {% for c in page.categories %}
-            <a href="#!" class="category">{{c}}</a>
-            {% endfor %}
+
+      <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="https://julie-dayo.net/index.html">
+              <span itemprop="name">ホーム</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+      
+        <li itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="{{site.baseurl}}/category/{{page.categories}}">
+              <span itemprop="name">{{page.cat-name}}</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+      
+        <li itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="{{page.url}}">
+              <span itemprop="name">{{page.title}}</span>
+          </a>
+          <meta itemprop="position" content="3" />
+        </li>
+      </ol>
+
+
+      <section id="article">
+        {% if page.thumbnail %}
+        <!--  -->
+        {% assign page_thumbnail = page.thumbnail %}
+        <!--  -->
+        {% else %}
+        <!--  -->
+        {% assign page_thumbnail = "assets/images/pattern.png" %}
+        <!--  -->
+        {% endif %}
+        
+        <div
+          class="article-thumbnail"
+          style="
+            background-image: url('{{ site.baseurl }}/{{ page_thumbnail }}');
+          "
+        ></div>
+          
+
+          <div class="article-bottom">
+            <h1 class="article-title">{{ page.title }}</h1>
+            <small class="article-date">{{page.date | date_to_string}}</small>
+            <div class="article-categories">
+              {% for c in page.categories %}
+              <a
+              href="{{site.baseurl}}/category/{{c | slugify}}"
+              data-base-url="{{site.baseurl}}"
+              class="article-category"
+              > {{ page.cat-name }}</a>
+              {% endfor %}
+    
           </div>
         </div>
-        <div class="content">{{content}}</div>
+        <div class="article-content">{{content}}</div>
       </section>
       {% include footer.html %}
     </main>
     {% include category-modal.html%}
+    <!-- ↓クリップボード操作のために使用するjsを読み込む　( https://clipboardjs.com/ ) -->
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+ 
+<script>
+     function copyToClipboard() {
+         // コピー対象をJavaScript上で変数として定義する
+         var copyTarget = document.getElementById("copyTarget");
+
+         // コピー対象のテキストを選択する
+         copyTarget.select();
+
+         // 選択しているテキストをクリップボードにコピーする
+         document.execCommand("Copy");
+
+         // コピーをお知らせする
+           alert("コピーしました！ : " + copyTarget.value);
+     }
+ </script>
   </body>
 </html>

@@ -1,26 +1,57 @@
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V86BTQJKJF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V86BTQJKJF');
+</script>
+
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{site.title}} | {{page.title}}</title>
-  {% if page.layout == "post" %}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/post.css" />
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css" />
-  {% else %}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/blog.css" />
-  {%endif%}
+  <meta name="description" content="" />
+  <link rel="icon" href="/assets/icons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+  <title> {{page.title}}</title>
+  <meta content="{{ site.title }}" property="og:site_name" />
+	{%- if page.title -%}
+	<meta content="{{ page.title }}" property="og:title" />
+	{%- else -%}
+	<meta content="{{ site.title }}" property="og:title" />
+	{%- endif -%}
+  {%- if page.description -%}
+	<meta content="{{ page.description }}" property="og:description" />
+	{%- else -%}
+	<meta content="{{ site.description }}" property="og:description" />
+	{%- endif -%}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+  {% if page.layout == "autopage_category" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/category.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css" />
+  {% elsif page.layout == "post" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/post.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css" />
+  {% endif %}
   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/common.css" />
   <script src="{{site.baseurl}}/assets/js/categories.js"></script>
-  <script>
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme) {
-      document.documentElement.setAttribute(
-        "data-theme",
-        localStorage.getItem("theme")
-      );
-    }
-  </script>
   {% if page.layout == "post" %}
   <script defer src="{{site.baseurl}}/assets/js/lbox.js"></script>
   {% endif %}
+
+
+<script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "pipipi blog",
+   "alternateName": pipipi blog,
+   "url": "https://julie-dayo.net/"
+  }
+ </script>
 </head>
