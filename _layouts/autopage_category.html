@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="jp">
+  {% include head.html %}
+  <body>
+    <main class="blogfeed">
+      {% include header.html %}
+
+      <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="{{site.baseurl}}/">
+            <span itemprop="name">ホーム</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="{{site.baseurl}}/categories/{{page.title | slugify}}">
+            <span itemprop="name">{{ page.title_jp }}</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+
+      <div class="category-tag"><h1>{{ page.title_jp }}</h1></div>
+      
+      <section id="articles">
+        {% assign category_name = page.title | downcase %}
+        {% for post in site.categories[category_name] %}
+        <article class="article">
+          <div class="article-top">
+            {% if post.thumbnail %}
+            <div class="article-thumbnail" style="background-image: url('../../{{ post.thumbnail }}');"></div>
+            {% endif %}
+          </div>
+          <div class="article-bottom">
+            <div class="article-title">
+              <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+            </div>
+            <small class="article-date">{{post.date | date_to_string}}</small>
+            <div class="article-categories">
+              {% for c in post.categories %}
+              <h1>
+                <a href="{{site.baseurl}}/category/{{c | slugify}}" data-base-url="{{site.baseurl}}" class="article-category">{{ page.title_jp }}</a>
+              </h1>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </section>
+      
+      {% include footer.html %}
+    </main>
+  </body>
+</html>
