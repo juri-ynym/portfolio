@@ -2,8 +2,11 @@
 <html lang="jp">
   {% include head.html %}
   <body>
+    
     <main class="blogfeed">
       {% include header.html %} {% include bio.html %}
+      {% include cv.html %}
+      <!--
       <section id="articles">
         {% for post in site.posts %}
         {% if post.thumbnail %}
@@ -61,7 +64,7 @@
           </div>
         </article>
         {% endif %}
-      </section>
+      </section>-->
       {% endfor %}
       <!--  -->
       {% include footer.html %}
